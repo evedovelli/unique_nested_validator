@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = UniqueNested::VERSION
   spec.authors       = ["Estevan Vedovelli"]
   spec.email         = ["evedovelli@gmail.com"]
-  spec.description   = %q{This validator allows you to verify nested models created with nested forms to validate the uniqueness of an attribute, More details in http://github.com/balexand/email_validator}
+  spec.description   = %q{This validator allows you to verify nested models created with nested forms to validate the uniqueness of an attribute, More details in http://github.com/evedovelli/unique_nested_validator}
   spec.summary       = %q{A validator for warranting the uniqueness of nested model attributes}
-  spec.homepage      = "http://github.com/balexand/email_validator"
+  spec.homepage      = "http://github.com/evedovelli/unique_nested_validator"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
