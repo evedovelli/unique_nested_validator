@@ -27,19 +27,19 @@ describe UniqueNestedValidator do
 
   describe 'validation of uniqueness of nested attributes' do
     it 'should fails when attributes are the same' do
-      TV.new(:channels => [{number: "nine"}, {number: "nine"}]).should_not be_valid
+      expect(TV.new(:channels => [{number: "nine"}, {number: "nine"}])).not_to be_valid
     end
     it 'should not fail when attributes are different' do
-      TV.new(:channels => [{number: "eight"}, {number: "seven"}]).should be_valid
+      expect(TV.new(:channels => [{number: "eight"}, {number: "seven"}])).to be_valid
     end
   end
 
   describe 'validation of uniqueness of nested ids' do
     it 'should fails when nested ids are the same' do
-      Race.new(:runners => [{id: 4554}, {id: 4554}]).should_not be_valid
+      expect(Race.new(:runners => [{id: 4554}, {id: 4554}])).not_to be_valid
     end
     it 'should not fail when nested ids are different' do
-      Race.new(:runners => [{id: 6332}, {id: 990}]).should be_valid
+      expect(Race.new(:runners => [{id: 6332}, {id: 990}])).to be_valid
     end
   end
 
@@ -47,12 +47,12 @@ describe UniqueNestedValidator do
     it 'should be default when the message is not defined' do
       tv = TV.new(:channels => [{number: "ten"}, {number: "ten"}])
       tv.valid?
-      tv.errors.messages.should == {:channels => ["cannot repeat numbers"]}
+      expect(tv.errors.messages).to match({:channels => ["cannot repeat numbers"]})
     end
     it 'should be the provided message when it is defined' do
       tv = TVWithErrorMessage.new(:channels => [{number: "ten"}, {number: "ten"}])
       tv.valid?
-      tv.errors.messages.should == {:channels => ["must be different"]}
+      expect(tv.errors.messages).to match({:channels => ["must be different"]})
     end
   end
 
