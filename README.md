@@ -1,5 +1,10 @@
 # UniqueNestedValidator
 
+[![Gem Version](https://badge.fury.io/rb/unique_nested_validator.svg)](http://badge.fury.io/rb/unique_nested_validator)
+[![Build Status](https://travis-ci.org/evedovelli/unique_nested_validator.svg?branch=v1.0.1)](https://travis-ci.org/evedovelli/unique_nested_validator)
+[![Code Climate](https://codeclimate.com/github/evedovelli/unique_nested_validator/badges/gpa.svg)](https://codeclimate.com/github/evedovelli/unique_nested_validator)
+
+
 This validator allows you to verify the uniqueness of attributes from nested models.
 
 ## Installation
